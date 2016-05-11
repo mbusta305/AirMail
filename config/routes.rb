@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'sessions#new'
+
+  resource :sessions
   resource :users
 
   # The priority is based upon order of creation: first created -> highest priority.
