@@ -2,6 +2,16 @@
 <%= form_for(@user, url: users_path) do |f| %>
 
   <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
     <%= f.label :username %>
     <%= f.text_field :username %>
   </p>
@@ -17,7 +27,19 @@
   </p>
 
   <p>
+    <%= f.label :phone_number %>
+    <%= f.number_field :phone_number %>
+  </p>
+
+  <p>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </p>
+
+  <p>
     <%= f.submit %>
   </p>
 
 <% end %>
+
+<%= link_to 'Sign In', root_path %>

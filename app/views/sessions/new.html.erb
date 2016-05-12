@@ -1,5 +1,5 @@
 <h1>Log In</h1>
-<%= form_tag sessions_path do %>
+<%= form_tag login_path do %>
   <p>
     <%= label_tag :username %>
     <%= text_field_tag :username %>
@@ -11,4 +11,8 @@
   <p>
     <%= submit_tag 'Log In' %>
   </p>
+
 <% end %>
+<p>
+  <%= link_to 'Sign Up', new_users_path %>
+</p>

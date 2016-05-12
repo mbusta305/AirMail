@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
+  # get 'packages/new'
+  #
+  # get 'packages/create'
+  #
+  # get 'packages/show'
+
+  get 'packages/index'
+  get 'packages/new'
+
+  # get 'packages/destroy'
+
   root 'sessions#new'
 
-  resource :sessions
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   resource :users
 
   # The priority is based upon order of creation: first created -> highest priority.
