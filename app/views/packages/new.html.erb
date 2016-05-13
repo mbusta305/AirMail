@@ -1,11 +1,118 @@
-<h1>Packages#new</h1>
-<p>Find me in app/views/packages/new.html.erb</p>
+<h1>New Package</h1>
 
 <%= form_for(@package, url: packages_new_path) do |f| %>
+
+<h2>From Address</h2>
+<p>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+</p>
+
+<p>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+</p>
 
 <p>
   <%= f.label :country %>
   <%= f.text_field :country %>
 </p>
+
+<p>
+  <%= f.label :company %>
+  <%= f.text_field :company %>
+</p>
+
+<p>
+  <%= f.label :street %>
+  <%= f.text_field :street %>
+</p>
+
+<p>
+  <%= f.label :street2 %>
+  <%= f.text_field :street2 %>
+</p>
+
+<p>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+</p>
+
+<p>
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+</p>
+
+<p>
+  <%= f.label :zip %>
+  <%= f.text_field :zip %>
+</p>
+
+<p>
+  <%= f.label :phone %>
+  <%= f.number_field :phone %>
+</p>
+
+<p>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</p>
+
+<h2>To Address</h2>
+<p>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+</p>
+
+<p>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+</p>
+
+<p>
+  <%= f.label :country %>
+  <%= f.text_field :country %>
+</p>
+
+<p>
+  <%= f.label :company %>
+  <%= f.text_field :company %>
+</p>
+
+<p>
+  <%= f.label :street %>
+  <%= f.text_field :street %>
+</p>
+
+<p>
+  <%= f.label :street2 %>
+  <%= f.text_field :street2 %>
+</p>
+
+<p>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+</p>
+
+<p>
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+</p>
+
+<p>
+  <%= f.label :zip %>
+  <%= f.text_field :zip %>
+</p>
+
+<p>
+  <%= f.label :phone %>
+  <%= f.number_field :phone %>
+</p>
+
+<p>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</p>
+
 
 <% end %>
