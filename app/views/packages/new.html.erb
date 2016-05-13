@@ -1,2 +1,11 @@
 <h1>Packages#new</h1>
 <p>Find me in app/views/packages/new.html.erb</p>
+
+<%= form_for(@package, url: packages_new_path) do |f| %>
+
+<p>
+  <%= f.label :country %>
+  <%= f.country_select :country %>
+</p>
+
+<% end %>
