@@ -2,4 +2,4 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$('body').css('background-color', '#1e8bc3')
+// $('body').css('background-color', '#1e8bc3')

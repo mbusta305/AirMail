@@ -1,1 +1,44 @@
-<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+
+<!DOCTYPE html>
+    <html>
+
+      <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="charges.scss">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src=" https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+        <title>Payment Complete Page</title>
+      </head>
+
+      <body>
+
+        <!-- <div id="header">This is the header</div> -->
+
+      <div id="container">
+
+        <div id="center" class="column">
+
+          <div class="Receipt">
+            <div class="circle">
+               <h2>You paid $ <strong><%= @amount %></strong></h2>
+            </div>
+            <h2>Thank you, Enjoy !</h2>
+            <p>A full receipt has been<br /> sent to zane@pedro.com</p>
+            <button class="action-btn" type="button">
+              <%= link_to 'Home', packages_index_url(current_user) %>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- <div id="left" class="column">This Is The Nav</div>
+
+        <div id="right" class="column">This Is The Aside</div> -->
+
+      </div>
+
+        <!-- <div id="footer">This is a footer</div> -->
+
+      </body>
+
+    </html>

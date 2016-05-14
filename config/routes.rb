@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy', as: :logout_path
 
   resources :users
   resources :packages

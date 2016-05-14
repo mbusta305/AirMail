@@ -4,13 +4,22 @@
   <title>AirMail</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src=" https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<img src="http://thumbs.dreamstime.com/t/la-lettre-avec-des-ailes-46169360.jpg" alt="victor santos" />
+    <% if current_user %>
+    Signed in as <%= current_user.username %> | <%= link_to "Logout", '/logout' %>
+    <% else %>
+    <%= link_to 'Login', '/login' %>
+    <% end %>
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>

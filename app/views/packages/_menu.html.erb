@@ -1,0 +1,63 @@
+<div class="image">
+      <img src="http://thumbs.dreamstime.com/t/la-lettre-avec-des-ailes-46169360.jpg" alt="victor santos" />
+</div>
+  <div class="well well-sm text-center">
+    <h1>Air Mail</h1>
+     <div class="container" style="display: flex; justify-content: center;">
+
+      <div class="col-xs-1">
+        <!-- <button id="btn1" data-panel="#panel1" class="btn btn-info panel-button">Home</button> -->
+          <%= link_to 'Home', login_path, :class => "btn btn-info" %>
+      </div>
+
+      <div class="col-xs-1">
+        <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">
+          About
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">About Us</h4>
+              </div>
+              <div class="modal-body">
+                AirMail was developed by three computer programers, who attended the Wyncode Academy of Miami.
+                It was the basis of their final project. The application was built on Ruby on Rails and uses html, css, and bootstrap for styling. We aim to serve travelers all over the world! Coming to an AirPort Near you!
+                Interested in having AirMail at your airpot? Please Contact us!
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-1">
+        <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal2">
+          Contact
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+              </div>
+              <div class="modal-body">
+                1-800-AIR-MAIL || air@mail.com
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
