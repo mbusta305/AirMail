@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20160513004417) do
 
   create_table "packages", force: :cascade do |t|
     t.string   "country"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "company"
@@ -25,18 +25,18 @@ ActiveRecord::Schema.define(version: 20160513004417) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.integer  "phone"
+    t.integer  "phone",      limit: 10
     t.string   "email"
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "phone_number",    limit: 8
+    t.integer  "phone_number",    limit: 10
     t.string   "address"
     t.boolean  "admin"
   end

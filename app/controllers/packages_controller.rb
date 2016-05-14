@@ -1,4 +1,6 @@
 class PackagesController < ApplicationController
+  before_filter :login_required, :only => [:new]
+
   def new
     @package = Package.new
   end
