@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # post 'packages/create'
   # # get 'packages/edit'
 
-  get 'packages/destroy'
+  # get 'packages/destroy'
 
   root 'sessions#new'
 
