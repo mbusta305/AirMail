@@ -1,9 +1,9 @@
-<h1>Packages#index</h1>
-<p>Find me in app/views/packages/index.html.erb</p>
+<h1>Packages index</h1>
 
-<h1>Listing Users</h1>
+<h1>My Air Mail</h1>
 
-<table>
+<td><%= link_to 'Create New Label', new_package_path, :class => "btn btn-success btn-sm" %></td>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>First name</th>
@@ -19,9 +19,9 @@
         <td><%= package.first_name %></td>
         <td><%= package.last_name %></td>
         <td><%= package.email %></td>
-        <td><%= link_to 'Show', package %></td>
-        <td><%= link_to 'Edit', edit_package_path(package) %></td>
-        <td><%= link_to 'Destroy', package, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', package, :class => "btn btn-primary btn-sm" %></td>
+        <!-- <td><%= link_to 'Edit', edit_package_path(package), :class => "btn btn-warning btn-sm" %></td> -->
+        <td><%= link_to 'Delete', package, :class => "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

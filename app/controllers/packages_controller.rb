@@ -1,6 +1,6 @@
 class PackagesController < ApplicationController
   before_filter :login_required, :only => [:new]
-  before_action :set_package, only: [:show, :edit, :update, :destroy]
+  before_action :set_package, only: [:show, :edit, :destroy]
 
 
   def new
@@ -31,6 +31,7 @@ class PackagesController < ApplicationController
 
   def destroy
     @package.destroy
+    redirect_to packages_url, notice: 'Product was successfully destroyed.'
   end
 end
 
