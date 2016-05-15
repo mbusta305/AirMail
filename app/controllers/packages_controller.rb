@@ -9,7 +9,8 @@ class PackagesController < ApplicationController
 
   def create
     @package = Package.new(package_params)
-    # @package.owner_id = current_user.id
+    puts @package
+    @package.user_id = current_user.id
     if @package.save
       redirect_to packages_path, notice: 'Package was successfully created.'
     else
@@ -22,8 +23,8 @@ class PackagesController < ApplicationController
   end
 
   def index
-    @packages = Package.all
-
+    # @packages = Package.all
+      @packages = Package.where(:user_id => current_user.id)
     # if !@current_user.admin
     #   redirect_to packages_new_path
     # end

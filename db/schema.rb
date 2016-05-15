@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513004417) do
+ActiveRecord::Schema.define(version: 20160515161821) do
 
   create_table "packages", force: :cascade do |t|
     t.string   "country"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160513004417) do
     t.string   "zip"
     t.integer  "phone",      limit: 10
     t.string   "email"
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160513004417) do
     t.integer  "phone_number",    limit: 10
     t.string   "address"
     t.boolean  "admin"
+    t.integer  "packages_id"
   end
 
   add_index "users", ["username"], name: "index_users_on_username", unique: true
