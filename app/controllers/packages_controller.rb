@@ -39,7 +39,7 @@ end
 private
 
   def package_params
-    params.require(:package).permit(:country, :first_name, :last_name, :company, :street, :street2, :city, :state, :zip, :phone, :email)
+    params.require(:package).permit(:country, :first_name, :last_name, :company, :street, :street2, :city, :state, :zip, :phone, :email, :tocountry, :tofirst_name, :tolast_name, :tocompany, :tostreet, :tostreet2, :tocity, :tostate, :tozip, :tophone, :toemail)
   end
   # Use callbacks to share common setup or constraints between actions.
   def set_package
