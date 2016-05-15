@@ -1,56 +1,92 @@
 <h1>New Package</h1>
 
 <div class="row">
+<%= form_for @package do |f| %>
+  <div class="col-md-6">
+    <h4>Return Address:</h4>
 
-<div class="col-md-6">
-  <%= form_for(@package, url: packages_path) do |f| %>
-  <h4>Return Address:</h4>
+    <div class="form-group">
+      <%= f.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
-  </div>
+    <div class="form-group">
+      <%= f.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
-  </div>
+    <div class="form-group">
+      <%= f.text_field :country, :class => "form-control", :placeholder => "Country" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.text_field :country, :class => "form-control", :placeholder => "Country" %>
-  </div>
+    <div class="form-group">
+      <%= f.text_field :company, :class => "form-control", :placeholder => "Company" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :street, :class => "form-control", :placeholder => "Street" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :street2, :class => "form-control", :placeholder => "Street2" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :city, :class => "form-control", :placeholder => "City" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :state, :class => "form-control", :placeholder => "State" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :zip, :class => "form-control", :placeholder => "Zip" %>
+    </div>
+    <div class="form-group">
+      <%= f.number_field :phone, :class => "form-control", :placeholder => "Phone" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :email, :class => "form-control", :placeholder => "Email" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.text_field :company, :class => "form-control", :placeholder => "Company" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :street, :class => "form-control", :placeholder => "Street" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :street2, :class => "form-control", :placeholder => "Street2" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :city, :class => "form-control", :placeholder => "City" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :state, :class => "form-control", :placeholder => "State" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :zip, :class => "form-control", :placeholder => "Zip" %>
-  </div>
-  <div class="form-group">
-    <%= f.number_field :phone, :class => "form-control", :placeholder => "Phone" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :email, :class => "form-control", :placeholder => "Email" %>
   </div>
 
-</div>
+  <!-- <div class="col-md-6">
 
-<div class="col-md-6">
+    <h4>To Address:</h4>
+    <div class="form-group">
+      <%= f.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
+    </div>
 
-</div>
+    <div class="form-group">
+      <%#= f.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
+    </div>
+
+    <div class="form-group">
+      <%#= f.text_field :country, :class => "form-control", :placeholder => "Country" %>
+    </div>
+
+    <div class="form-group">
+      <%#= f.text_field :company, :class => "form-control", :placeholder => "Company" %>
+    </div>
+    <div class="form-group">
+      <%#= f.text_field :street, :class => "form-control", :placeholder => "Street" %>
+    </div>
+    <div class="form-group">
+      <%#= f.text_field :street2, :class => "form-control", :placeholder => "Street2" %>
+    </div>
+    <div class="form-group">
+      <%#= f.text_field :city, :class => "form-control", :placeholder => "City" %>
+    </div>
+    <div class="form-group">
+      <%#= f.text_field :state, :class => "form-control", :placeholder => "State" %>
+    </div>
+    <div class="form-group">
+      <%#= f.text_field :zip, :class => "form-control", :placeholder => "Zip" %>
+    </div>
+    <div class="form-group">
+      <%#= f.number_field :phone, :class => "form-control", :placeholder => "Phone" %>
+    </div>
+    <div class="form-group">
+      <%#= f.text_field :email, :class => "form-control", :placeholder => "Email" %>
+    </div>
+  </div> -->
 <%= f.submit 'Create Package', :class => 'btn btn-info' %>
 <% end %>
 <%= link_to 'PAY', new_charge_path, :class => "btn btn-success" %>
-<%= link_to 'Show', packages_path, :class => "btn btn-warning" %>
-<%= link_to 'Destroy', packages_destroy_path, :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
+<!-- <%#= link_to 'Destroy', packages_destroy_path, :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %> -->
 </div>
