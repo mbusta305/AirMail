@@ -23,12 +23,16 @@ class PackagesController < ApplicationController
   end
 
   def index
-    # @packages = Package.all
+    if current_user.admin
+     @packages = Package.all
+    else
       @packages = Package.where(:user_id => current_user.id)
     # if !@current_user.admin
     #   redirect_to packages_new_path
-    # end
+    end
   end
+
+
 
   def destroy
     @package.destroy
