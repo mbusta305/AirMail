@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160515164911) do
-=======
-ActiveRecord::Schema.define(version: 20160515161821) do
->>>>>>> 6f388fd03e9920561f029cf65d40d8746e4fd8f5
 
   create_table "packages", force: :cascade do |t|
     t.string   "country"
@@ -31,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160515161821) do
     t.string   "zip"
     t.integer  "phone",        limit: 10
     t.string   "email"
-<<<<<<< HEAD
+    t.integer  "user_id"
     t.string   "tocompany"
     t.string   "tostreet"
     t.string   "tostreet2"
@@ -43,9 +39,6 @@ ActiveRecord::Schema.define(version: 20160515161821) do
     t.string   "tocountry"
     t.string   "tofirst_name"
     t.string   "tolast_name"
-=======
-    t.integer  "user_id"
->>>>>>> 6f388fd03e9920561f029cf65d40d8746e4fd8f5
   end
 
   create_table "users", force: :cascade do |t|

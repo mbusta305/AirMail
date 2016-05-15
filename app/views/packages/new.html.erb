@@ -41,99 +41,51 @@
     <div class="form-group">
       <%= f.text_field :email, :class => "form-control", :placeholder => "Email" %>
     </div>
+  </div>
+  <div class="col-md-6">
+    <h4>To Address:</h4>
+    <div class="form-group">
+      <%= f.text_field :tofirst_name, :class => "form-control", :placeholder => "First Name" %>
+    </div>
 
-<<<<<<< HEAD
-<div class="col-md-6">
-  <%= form_for(@package, url: packages_path) do |f| %>
-  <h4>Return Address:</h4>
+    <div class="form-group">
+      <%= f.text_field :tolast_name, :class => "form-control", :placeholder => "Last Name" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.text_field :first_name, :class => "form-control", :placeholder => "First Name" %>
-  </div>
+    <div class="form-group">
+      <%= f.text_field :tocountry, :class => "form-control", :placeholder => "Country" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.text_field :last_name, :class => "form-control", :placeholder => "Last Name" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.text_field :country, :class => "form-control", :placeholder => "Country" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.text_field :company, :class => "form-control", :placeholder => "Company" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :street, :class => "form-control", :placeholder => "Street" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :street2, :class => "form-control", :placeholder => "Street2" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :city, :class => "form-control", :placeholder => "City" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :state, :class => "form-control", :placeholder => "State" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :zip, :class => "form-control", :placeholder => "Zip" %>
-  </div>
-  <div class="form-group">
-    <%= f.number_field :phone, :class => "form-control", :placeholder => "Phone" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :email, :class => "form-control", :placeholder => "Email" %>
+    <div class="form-group">
+      <%= f.text_field :tocompany, :class => "form-control", :placeholder => "Company" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :tostreet, :class => "form-control", :placeholder => "Street" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :tostreet2, :class => "form-control", :placeholder => "Street2" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :tocity, :class => "form-control", :placeholder => "City" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :tostate, :class => "form-control", :placeholder => "State" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :tozip, :class => "form-control", :placeholder => "Zip" %>
+    </div>
+    <div class="form-group">
+      <%= f.number_field :tophone, :class => "form-control", :placeholder => "Phone" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :toemail, :class => "form-control", :placeholder => "Email" %>
+    </div>
   </div>
 
+
+  <%= f.submit 'Create Package', :class => 'btn btn-info' %>
+  <% end %>
 </div>
-
-<div class="col-md-6">
-
-  <h4>To Address:</h4>
-  <div class="form-group">
-    <%= f.text_field :tofirst_name, :class => "form-control", :placeholder => "First Name" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.text_field :tolast_name, :class => "form-control", :placeholder => "Last Name" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.text_field :tocountry, :class => "form-control", :placeholder => "Country" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.text_field :tocompany, :class => "form-control", :placeholder => "Company" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :tostreet, :class => "form-control", :placeholder => "Street" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :tostreet2, :class => "form-control", :placeholder => "Street2" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :tocity, :class => "form-control", :placeholder => "City" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :tostate, :class => "form-control", :placeholder => "State" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :tozip, :class => "form-control", :placeholder => "Zip" %>
-  </div>
-  <div class="form-group">
-    <%= f.number_field :tophone, :class => "form-control", :placeholder => "Phone" %>
-  </div>
-  <div class="form-group">
-    <%= f.text_field :toemail, :class => "form-control", :placeholder => "Email" %>
-  </div>
-</div>
-=======
-  </div>
-
-
-
->>>>>>> 6f388fd03e9920561f029cf65d40d8746e4fd8f5
-<%= f.submit 'Create Package', :class => 'btn btn-info' %>
-<% end %>
 <%= link_to 'PAY', new_charge_path, :class => "btn btn-success" %>
 <%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
 </div>
