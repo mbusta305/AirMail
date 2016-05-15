@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html style="text-align: center;">
+  
 <%= form_tag charges_path do %>
   <article>
     <% if flash[:error].present? %>
@@ -18,3 +21,5 @@
 
  <%= link_to 'BACK', new_package_path, :class => "btn btn-warning" %>
 <% end %>
+
+</html>

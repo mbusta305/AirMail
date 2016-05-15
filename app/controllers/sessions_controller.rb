@@ -11,9 +11,9 @@ class SessionsController < ApplicationController
 
     session[:user_id] = @user.id
     if current_user.admin
-      redirect_to packages_index_path
+      redirect_to packages_path
     else
-      redirect_to packages_new_path
+      redirect_to packages_path
     end
   end
 

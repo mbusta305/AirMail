@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   #
   # get 'packages/show'
 
-  get 'packages/index'
-  get 'packages/new'
+  # get 'packages/index'
+  # get 'packages/new'
+  # post 'packages/create'
+  # # get 'packages/edit'
 
-  # get 'packages/destroy'
+  get 'packages/destroy'
 
   root 'sessions#new'
 
