@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515163424) do
+ActiveRecord::Schema.define(version: 20160515164911) do
 
   create_table "packages", force: :cascade do |t|
     t.string   "country"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "company"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160515163424) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.integer  "phone",      limit: 10
+    t.integer  "phone",        limit: 10
     t.string   "email"
     t.string   "tocompany"
     t.string   "tostreet"
@@ -33,8 +33,11 @@ ActiveRecord::Schema.define(version: 20160515163424) do
     t.string   "tocity"
     t.string   "tostate"
     t.string   "tozip"
-    t.integer  "tophone",    limit: 10
+    t.integer  "tophone",      limit: 10
     t.string   "toemail"
+    t.string   "tocountry"
+    t.string   "tofirst_name"
+    t.string   "tolast_name"
   end
 
   create_table "users", force: :cascade do |t|
