@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515164911) do
+ActiveRecord::Schema.define(version: 20160516234715) do
 
   create_table "packages", force: :cascade do |t|
     t.string   "country"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160515164911) do
     t.string   "tocountry"
     t.string   "tofirst_name"
     t.string   "tolast_name"
+    t.string   "label_url"
   end
 
   create_table "users", force: :cascade do |t|
