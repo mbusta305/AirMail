@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # get 'packages/destroy'
 
-  root 'sessions#new'
+  root 'landing#index'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :users
   resources :packages
   resources :charges
+  resources :landing
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
