@@ -14,9 +14,9 @@
       <%= f.text_field :tocountry, :class => "form-control", :placeholder => "Country", :required => 'required' %>
     </div>
 
-   <!--  <div class="form-group">
+   <div class="form-group">
       <%= f.text_field :tocompany, :class => "form-control", :placeholder => "Company" %>
-    </div> -->
+    </div>
     <div class="form-group">
       <%= f.text_field :tostreet, :class => "form-control", :placeholder => "Street", :required => 'required' %>
     </div>
@@ -41,8 +41,25 @@
   </div>
 
 
+<<<<<<< Updated upstream
   <%= f.submit 'Create Package', :class => 'btn btn-info btn-lrg' %>
   <%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
+=======
+>>>>>>> Stashed changes
 
-  <% end %>
+  <%#= f.submit 'Create Package', :class => 'btn btn-info btn-lrg' %>
+  <%#= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
+  <%#= link_to 'PAY', new_charge_path, :class => "btn btn-success" %>
+
+
+
+<br>
+<center><%= f.submit 'Create Package', :class => 'btn btn-info' %>
+  <% end %></center>
+</div>
+<br>
+<center>
+<%= link_to 'PAY', new_charge_path, :class => "btn btn-success" %>
+<%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
+</center>
 </div>
