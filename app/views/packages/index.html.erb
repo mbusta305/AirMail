@@ -17,7 +17,7 @@
         <td><%= package.toemail %></td>
         <td><%= link_to 'Show', package, :class => "btn btn-primary btn-sm" %></td>
         <td><%= link_to "Shipment Sticker", package.label_url , target: "blank", :class => "btn btn-info btn-sm" %></td>
-
+        <td><%= link_to 'print', shipping_label_path(package), target: "blank", :class => "btn btn-warning btn-sm"%></td>
         <!-- <td><%= link_to 'Edit', edit_package_path(package), :class => "btn btn-warning btn-sm" %></td> -->
         <% if current_user.admin %>
           <td><%= link_to 'Delete', package, :class => "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>

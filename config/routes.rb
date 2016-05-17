@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy', as: :logout_path
+  get '/shipping_label/:id' => 'packages#shipping_label', as: :shipping_label
 
   resources :users
   resources :packages

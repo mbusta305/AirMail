@@ -1,7 +1,7 @@
 require 'easypost'
 class PackagesController < ApplicationController
   before_filter :login_required, :only => [:new]
-  before_action :set_package, only: [:show, :edit, :destroy]
+  before_action :set_package, only: [:show, :edit, :destroy, :shipping_label]
 
 
   def new
@@ -108,6 +108,10 @@ EasyPost.api_key = 'fLMWifRPARb3cinJZWg2sA'
   def destroy
     @package.destroy
     redirect_to packages_url, notice: 'Product was successfully destroyed.'
+  end
+
+  def shipping_label
+    @label_url = @package.label_url
   end
 
 private

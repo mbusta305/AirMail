@@ -1,0 +1,5 @@
+<td><%= link_to 'print', shipping_label_path(@package) , target: "blank", :class => "btn btn-warning btn-sm", :onclick => 'window.print();return false;'%></td>
+<br>
+<%= image_tag @label_url, style:"height: 75%; width: 75%;" %>
+<br>
+<td><%= link_to 'print', shipping_label_path(@package) , target: "blank", :class => "btn btn-warning btn-sm", :onclick => 'window.print();return false;'%></td>

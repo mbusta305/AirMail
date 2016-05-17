@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html style="text-align: center;">
-  
+
 <%= form_tag charges_path do %>
   <article>
     <% if flash[:error].present? %>
@@ -15,8 +15,12 @@
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
+          data-name="AirMail"
+          data-image="http://i65.tinypic.com/2cg0fx3.png"
+          data-description="Shipping Package"
           data-amount="500"
+          data-zip-code="True"
+          data-billing-address="True"
           data-locale="auto"></script>
 
  <%= link_to 'BACK', new_package_path, :class => "btn btn-warning" %>
