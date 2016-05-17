@@ -15,22 +15,22 @@ class PackagesController < ApplicationController
 EasyPost.api_key = 'fLMWifRPARb3cinJZWg2sA'
 
     to_address = EasyPost::Address.create(
-      name: package_params[:first_name],
-      :street1 => '179 N Harbor Dr',
-      :city => 'Redondo Beach',
-      :state => 'CA',
-      :zip => '90277',
-      :country => 'US',
-      :phone => '310-808-5243'
+      name: package_params[:tofirst_name],
+      street1: package_params[:tostreet],
+      city: package_params[:tocity],
+      state: package_params[:tostate],
+      zip: package_params[:tozip],
+      country: package_params[:tocountry],
+      phone: package_params[:tophone]
     )
     from_address = EasyPost::Address.create(
-      :company => 'EasyPost',
-      :street1 => '118 2nd Street',
-      :street2 => '4th Floor',
-      :city => 'San Francisco',
-      :state => 'CA',
-      :zip => '94105',
-      :phone => '415-456-7890'
+      :company => 'Air Mail',
+      :street1 => '400 NW 26 St',
+      :street2 => '1st Floor',
+      :city => 'Miami',
+      :state => 'FL',
+      :zip => '33136',
+      :phone => '555-555-5555'
     )
 
     parcel = EasyPost::Parcel.create(
