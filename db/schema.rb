@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516234715) do
+ActiveRecord::Schema.define(version: 20160517201450) do
 
   create_table "packages", force: :cascade do |t|
     t.string   "country"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160516234715) do
     t.string   "tofirst_name"
     t.string   "tolast_name"
     t.string   "label_url"
+    t.float    "shipping"
   end
 
   create_table "users", force: :cascade do |t|

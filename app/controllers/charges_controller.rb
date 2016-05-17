@@ -1,10 +1,14 @@
 class ChargesController < ApplicationController
+
   def new
-end
+    @package = Package.find(params[:package])
+  end
 
   def create
     # Amount in cents
-    @amount = 500
+    # @amount = 500
+    @amount = (params[:package][:shipping].to_f * 100).to_i
+    p @amount
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],

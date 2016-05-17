@@ -9,16 +9,20 @@
       </div>
     <% end %>
     <label class="amount">
-      <span>Amount: $5.00</span>
+      <span>Amount: <%= @package.shipping %></span>
     </label>
   </article>
+
+  <%= hidden_field :package, :shipping %>
+
+
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-name="AirMail"
           data-image="http://i65.tinypic.com/2cg0fx3.png"
           data-description="Shipping Package"
-          data-amount="500"
+          data-amount=<%= (@package.shipping * 100) %>
           data-zip-code="True"
           data-billing-address="True"
           data-locale="auto"></script>

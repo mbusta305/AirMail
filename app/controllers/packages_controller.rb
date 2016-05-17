@@ -72,6 +72,9 @@ EasyPost.api_key = 'fLMWifRPARb3cinJZWg2sA'
       :rate => shipment.lowest_rate
     )
 
+    puts "LOWEST RATE #{shipment.lowest_rate.list_rate}"
+    shipping = shipment.lowest_rate.list_rate
+
     shipment.insure(amount: 100)
 
     puts shipment.insurance
@@ -80,6 +83,7 @@ EasyPost.api_key = 'fLMWifRPARb3cinJZWg2sA'
 
 
     @package = Package.new(package_params)
+    @package.update(shipping: shipping)
     @package.label_url = @user_shipment
     puts @package
     @package.user_id = current_user.id
@@ -117,7 +121,7 @@ EasyPost.api_key = 'fLMWifRPARb3cinJZWg2sA'
 private
 
   def package_params
-    params.require(:package).permit(:country, :first_name, :last_name, :company, :street, :street2, :city, :state, :zip, :phone, :email, :tocountry, :tofirst_name, :tolast_name, :tocompany, :tostreet, :tostreet2, :tocity, :tostate, :tozip, :tophone, :toemail)
+    params.require(:package).permit(:country, :shipping, :first_name, :last_name, :company, :street, :street2, :city, :state, :zip, :phone, :email, :tocountry, :tofirst_name, :tolast_name, :tocompany, :tostreet, :tostreet2, :tocity, :tostate, :tozip, :tophone, :toemail)
   end
   # Use callbacks to share common setup or constraints between actions.
   def set_package
