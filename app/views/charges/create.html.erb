@@ -1,44 +1,79 @@
-
 <!DOCTYPE html>
-    <html>
-
-      <head>
-        <meta charset="utf-8">
-        <link type="text/css" rel="stylesheet" href="charges.scss">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <script src=" https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
-        <title>Payment Complete Page</title>
-      </head>
-
-      <body>
-
-        <!-- <div id="header">This is the header</div> -->
-
-      <div id="container">
-
-        <div id="center" class="column">
-
-          <div class="Receipt">
-            <div class="circle">
-               <h2>You paid $ <strong><%= @amount/100.00 %></strong></h2>
+ <html>
+  <head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="charges.scss">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src=" https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>Payment Complete Page</title>
+  </head>
+<div class="container">
+    <div class="row">
+        <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <address>
+                        <strong>Air Mail</strong>
+                        <br>
+                        1234 26th Street
+                        <br>
+                        Miami, Florida 33138
+                        <br>
+                        <abbr title="Phone">P:</abbr> 1-800-AIR-MAIL
+                    </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                    <p>
+                        <em>Date:</em>
+                    </p>
+                    <p>
+                        <em>Receipt #:</em>
+                    </p>
+                </div>
             </div>
-            <h2>Thank you, Enjoy !</h2>
-            <p>A full receipt has been<br /> sent to zane@pedro.com</p>
-            <button class="action-btn" type="button">
-              <%= link_to 'Home', packages_url(current_user) %>
-            </button>
-          </div>
-
+            <div class="row">
+                <div class="text-center">
+                    <h1>Shipping Cost Receipt</h1>
+                </div>
+                </span>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>#</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-md-9"><em>Small Package Shipping</em></h4></td>
+                            <td class="col-md-1" style="text-align: center"> 1 </td>
+                            <td class="col-md-1 text-center">$<%= @amount/100.00 %></td>
+                            <td class="col-md-1 text-center">$<%= @amount/100.00 %></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">
+                            <p>
+                                <strong>Subtotal: $</strong>
+                            </p>
+                            </td>
+                            <td class="text-center">
+                            <p>
+                                <strong><%= @amount/100.00 %></strong>
+                            </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right"><h4><strong>Total: $</strong></h4></td>
+                            <td class="text-center text-danger"><h4><strong><%= @amount/100.00 %></strong></h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </td>
+            </div>
         </div>
-
-        <!-- <div id="left" class="column">This Is The Nav</div>
-
-        <div id="right" class="column">This Is The Aside</div> -->
-
-      </div>
-
-        <!-- <div id="footer">This is a footer</div> -->
-
-      </body>
-
-    </html>
+    </div>
+    <br>
+    <center><button class="action-btn" type="button" style ="background-color:green"><%= link_to 'Home', packages_url(current_user) %></button></center>
+</html>
