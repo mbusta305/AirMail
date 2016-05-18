@@ -29,9 +29,11 @@
         <td><%= link_to 'Print Shipment Sticker', shipping_label_path(package), target: "blank", :class => "btn btn-warning btn-sm"%></td>
         <!-- <td><%= link_to 'Edit', edit_package_path(package), :class => "btn btn-warning btn-sm" %></td> -->
         <% if current_user.admin %>
-          <td><%= link_to 'Delete', package, :class => "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete', package, data: { confirm: 'Are you sure?' }, method: :delete, :class => "btn btn-danger btn-sm" %></td>
+
         <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
+
