@@ -1,4 +1,7 @@
-<h1>New Package</h1>
+<center><h1>New Package</h1></center>
+
+<center><%= link_to 'Home', packages_path, :class => "btn btn-primary btn-lg" %></center>
+    <br>
 
 <div class="row">
 <%= form_for @package do |f| %>
@@ -39,19 +42,10 @@
       <%= f.text_field :toemail, :class => "form-control", :placeholder => "Email", :required => 'required' %>
     </div>
   </div>
-
-
-  <%= f.submit 'Create Package', :class => 'btn btn-info btn-lrg' %>
-  <%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
-
-
-<br>
-<center><%= f.submit 'Create Package', :class => 'btn btn-info' %>
-  <% end %></center>
-</div>
-<br>
-<center>
-<%= link_to 'PAY', new_charge_path, :class => "btn btn-success" %>
-<%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
-</center>
+  <br>
+  <br>
+  <center><%= f.submit 'Create Package', :class => 'btn btn-info btn-lrg' %>
+  <%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %></center>
+  <% end %>
+  </div>
 </div>

@@ -1,6 +1,14 @@
-<h1>My Air Mail</h1>
+<center><h1>My Air Mail</h1></center>
+<br>
+    <center><%= link_to 'Home', root_path, :class => "btn btn-primary btn-lg" %></center>
+    <br>
 
-<td><%= link_to 'Create New Label', new_package_path, :class => "btn btn-success btn-sm" %></td>
+
+    <td>
+      <center><%= link_to 'Create New Label', new_package_path, :class => "btn btn-success btn-sm" %></center>
+    </td>
+
+<br>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -15,10 +23,10 @@
       <tr>
         <td><%= package.tofirst_name %></td>
         <td><%= package.toemail %></td>
-        <td><%= link_to 'PAY', new_charge_path(package: package.id), :class => "btn btn-success btn-sm" %></td>
+        <td><%= link_to 'Pay Now', new_charge_path(package: package.id), :class => "btn btn-success btn-sm" %></td>
         <td><%= link_to 'Show', package, :class => "btn btn-primary btn-sm" %></td>
-        <td><%= link_to "Shipment Sticker", package.label_url , target: "blank", :class => "btn btn-info btn-sm" %></td>
-        <td><%= link_to 'print', shipping_label_path(package), target: "blank", :class => "btn btn-warning btn-sm"%></td>
+        <td><%= link_to "View Shipment Sticker", package.label_url , target: "blank", :class => "btn btn-info btn-sm" %></td>
+        <td><%= link_to 'Print Shipment Sticker', shipping_label_path(package), target: "blank", :class => "btn btn-warning btn-sm"%></td>
         <!-- <td><%= link_to 'Edit', edit_package_path(package), :class => "btn btn-warning btn-sm" %></td> -->
         <% if current_user.admin %>
           <td><%= link_to 'Delete', package, :class => "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
