@@ -3,27 +3,37 @@
       <center><h3>Sign Up</h3></center>
 
         <div class="form-group">
-          <%= f.text_field :first_name, :placeholder => "First Name", :required => 'required' %>
+          <div class="col-lg-4">
+          <%= f.text_field :first_name, :class => "form-control", :placeholder => "First Name", :required => 'required' %>
+          </div>
         </div>
 
         <div class="form-group">
-          <%= f.text_field :last_name, :placeholder => "Last Name", :required => 'required' %>
+          <div class="col-lg-4">
+          <%= f.text_field :last_name, :class => "form-control", :placeholder => "Last Name", :required => 'required' %>
+          </div>
         </div>
 
         <div class="form-group">
-          <%= f.text_field :username, :placeholder => "Username", :required => 'required' %>
+          <div class="col-lg-4">
+          <%= f.text_field :username, :class => "form-control", :placeholder => "Username", :required => 'required' %>
+          </div>
         </div>
 
         <div class="form-group">
-          <%= f.password_field :password, :placeholder => "Password", :required => 'required' %>
+          <div class="col-lg-4">
+          <%= f.password_field :password, :class => "form-control", :placeholder => "Password", :required => 'required' %>
+          </div>
         </div>
 
         <div class="form-group">
-          <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation", :required => 'required' %>
+          <div class="col-lg-4">
+          <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Password Confirmation", :required => 'required' %>
+          </div>
         </div>
 
         <center><%= f.submit 'Sign Up', :class => "btn btn-success" %></center>
         <br>
-        <center>Or feel free to <%= link_to 'Login', login_path %></center>
+        <center><%= link_to 'Login', login_path %></center>
         <br>
     <% end %>

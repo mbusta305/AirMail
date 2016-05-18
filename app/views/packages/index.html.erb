@@ -1,12 +1,13 @@
-<center><h1>My Air Mail</h1></center>
-<br>
-    <center><%= link_to 'Home', root_path, :class => "btn btn-primary btn-lg" %></center>
-    <br>
+<div class="column">
+  <div class="col-md-6">
+    <center><%= link_to 'Home', root_path, :class => "btn btn-primary btn-md" %></center>
+    </div>
 
+    <div class="col-md-6">
+      <center><%= link_to 'Create New Label', new_package_path, :class => "btn btn-success btn-md" %></center>
+  </div>
+</div>
 
-    <td>
-      <center><%= link_to 'Create New Label', new_package_path, :class => "btn btn-success btn-sm" %></center>
-    </td>
 
 <br>
 <table class="table table-hover">
@@ -36,4 +37,3 @@
     <% end %>
   </tbody>
 </table>
-
