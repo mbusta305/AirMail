@@ -44,8 +44,35 @@
   </div>
   <br>
   <br>
-  <center><%= f.submit 'Create Package', :class => 'btn btn-info btn-md' %>
+  <center><%= f.submit 'Create Package', :class => 'btn btn-info btn-md', :id => "label-action-prog" , :onclick =>"startTime();" %>
   <%= link_to 'My Packages', packages_path, :class => "btn btn-warning btn-md" %></center>
   <% end %>
+
+  <div class="progress-b" align="left"> <span id="prog"></span>
+    <br>
+    <center><label id="indice" style="color:#FFFFFF">0%</label></center>
   </div>
+
 </div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+  var progress = 0;
+  var interval;
+
+  function startTime() {
+    interval = window.setInterval(function () {
+        document.getElementById("prog").style.width = progress + "%";
+        progress++;
+        if (progress >= 100) {
+            window.clearInterval(interval)
+        }
+    }, 10)
+  }
+
+</script>
