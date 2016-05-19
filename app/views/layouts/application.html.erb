@@ -11,6 +11,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="row">
@@ -22,6 +24,14 @@
         </div>
       </div>
   </nav>
+
+
+  <div class="container">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+  </div>
+  
 
   <div class="container">
     <div class="jumbotron">
