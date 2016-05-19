@@ -41,7 +41,7 @@ EasyPost.api_key = 'LxoAsb8m8JE4gRQSBauDTQ'
     )
 
     customs_item = EasyPost::CustomsItem.create(
-      :description => 'EasyPost T-shirts',
+      :description => 'Air Mail Shipping',
       :quantity => 2,
       :value => 23.56,
       :weight => 33,

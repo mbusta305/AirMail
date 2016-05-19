@@ -1,17 +1,17 @@
 <div class="row">
-  <div class="col-md-6"><center><%= button_to 'Sign Up', new_user_path, :method => :get, :class => "btn btn-primary btn-lg" %>
+ <div class="col-md-6"><center><%= button_to 'Sign Up', new_user_path, :method => :get, :class => "btn btn-primary btn-lg" %>
 </center></div>
 
-  <div class="col-md-6"><center><%= button_to 'Login', login_path, :class => "btn btn-primary btn-lg" %>
-  </center>
+ <div class="col-md-6"><center><%= button_to 'Login', login_path, :class => "btn btn-primary btn-lg" %>
+ </center>
 </div>
 
 <% if current_user %>
-  <%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
+ <%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %>
 <% end %>
 </div>
 <br>
 
 <div style="position: absolute; bottom: 10%; right: 25%; left: 25%;">
-	<h1 style="font-family: parkavenue;"><em>"Don't toss it. Ship it."</em></h1>
+    <h1 style="font-family: parkavenue;"><em>"Don't toss it. Ship it."</em></h1>
 </div>
