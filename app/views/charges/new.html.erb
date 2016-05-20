@@ -1,33 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kVo/Eh0sv7ZdiwZK32nRsp1FrDT3sLRLx3zVpSSTI9UdO5H02LJNLBg5F1gwvKg0" crossorigin="anonymous">
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"   integrity="sha256-tp8VZ4Y9dg702r7D6ynzSavKSwB9zjariSZ4Snurvmw="   crossorigin="anonymous"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-<html style="text-align: center;">
+<div class="container">
+  <div class="jumbotron">
 
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
+  <div class="container">
+    <img src="http://i66.tinypic.com/2rr53t4.png" alt="Air Mail" style="width:825px;height:628px;">
+  </div> 
+
+    <html style="text-align: center;">
+
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          <span><h2>Your total amount is : $<%= @package.shipping %></h2></span>
+        </label>
+      </article>
+      <br>
+
+
+      <%= hidden_field :package, :shipping %>
+
+
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-name="AirMail"
+              data-image="http://i65.tinypic.com/2cg0fx3.png"
+              data-description="Shipping Package"
+              data-amount=<%= (@package.shipping * 100) %>
+              data-zip-code="True"
+              data-billing-address="True"
+              data-locale="auto"></script>
+<br>
+<br>
+     <%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %></center>
     <% end %>
-    <label class="amount">
-      <span>Amount: <%= @package.shipping %></span>
-    </label>
-  </article>
-
-  <%= hidden_field :package, :shipping %>
 
 
+    </html>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-name="AirMail"
-          data-image="http://i65.tinypic.com/2cg0fx3.png"
-          data-description="Shipping Package"
-          data-amount=<%= (@package.shipping * 100) %>
-          data-zip-code="True"
-          data-billing-address="True"
-          data-locale="auto"></script>
+  </div>
+</div>
 
- <%= link_to 'My Packages', packages_path, :class => "btn btn-warning" %></center>
-<% end %>
-
+</body>
 </html>
