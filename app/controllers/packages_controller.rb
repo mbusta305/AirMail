@@ -34,10 +34,8 @@ EasyPost.api_key = 'LxoAsb8m8JE4gRQSBauDTQ'
     )
 
     parcel = EasyPost::Parcel.create(
-      :width => 15.2,
-      :length => 18,
-      :height => 9.5,
-      :weight => 35.1
+      :predefined_package => 'FlatRatePaddedEnvelope',
+      :weight => 10.00
     )
 
     customs_item = EasyPost::CustomsItem.create(
