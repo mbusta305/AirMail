@@ -17,6 +17,9 @@
 	<button type="button" class="btn navbar-right btn-lg" data-toggle="modal" data-target="#myModal2" style="background-color: #00bc8c;">
 	  Contact
 	</button>
+	<button type="button" class="btn navbar-right btn-lg" data-toggle="modal" data-target="#myModal3" style="background-color: #00bc8c;">
+	  Donate
+	</button>
 </nav>
 
 <!-- About Modal -->
@@ -57,6 +60,25 @@
   </div>
 </div>
        
+
+<!-- Donate Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Donate</h4>
+      </div>
+      <div class="modal-body">
+       If you don't care to mail your item, feel free to donate and we'll get it to someone in need!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="row">
  <div class="col-md-6"><center><%= button_to 'Sign Up', new_user_path, :method => :get, :class => "btn btn-primary btn-lg" %>
