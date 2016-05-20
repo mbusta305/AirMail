@@ -6,7 +6,7 @@ class AddAddressFromToPackage < ActiveRecord::Migration
     add_column :packages, :city, :string
     add_column :packages, :state, :string
     add_column :packages, :zip, :string
-    add_column :packages, :phone, :integer, :limit => 10
+    add_column :packages, :phone, :string
     add_column :packages, :email, :string
   end
 end

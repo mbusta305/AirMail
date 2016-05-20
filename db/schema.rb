@@ -11,12 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519005141) do
+ActiveRecord::Schema.define(version: 20160517201450) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "packages", force: :cascade do |t|
     t.string   "country"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "company"
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160519005141) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.integer  "phone",        limit: 10
+    t.string   "phone"
     t.string   "email"
     t.integer  "user_id"
     t.string   "tocompany"
@@ -34,29 +37,28 @@ ActiveRecord::Schema.define(version: 20160519005141) do
     t.string   "tocity"
     t.string   "tostate"
     t.string   "tozip"
-    t.integer  "tophone",      limit: 10
+    t.string   "tophone"
     t.string   "toemail"
     t.string   "tocountry"
     t.string   "tofirst_name"
     t.string   "tolast_name"
     t.string   "label_url"
     t.float    "shipping"
-    t.boolean  "paid"
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "phone_number",    limit: 10
+    t.string   "phone_number"
     t.string   "address"
     t.boolean  "admin"
     t.integer  "packages_id"
   end
 
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end
