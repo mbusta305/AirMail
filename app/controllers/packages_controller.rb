@@ -12,7 +12,7 @@ class PackagesController < ApplicationController
 
     # @users = User.all
 
-EasyPost.api_key = 'LxoAsb8m8JE4gRQSBauDTQ'
+EasyPost.api_key = ENV['easy_post']
 
     to_address = EasyPost::Address.create(
       name: package_params[:tofirst_name],
