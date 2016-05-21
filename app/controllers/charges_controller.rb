@@ -16,7 +16,7 @@ Stripe.api_key = Rails.configuration.stripe[:secret_key]
   def create
     # Amount in cents
     # @amount = 500
-    @amount = (params[:package][:shipping].to_f * 100)
+    @amount = (params[:package][:shipping].to_f * 100).to_i
     p @amount
 
     customer = Stripe::Customer.create(
