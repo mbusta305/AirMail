@@ -9,7 +9,7 @@ class ChargesController < ApplicationController
   def create
     # Amount in cents
     # @amount = 500
-    @amount = (params[:package][:shipping].to_f * 100).to_i
+    @amount = (params[:package][:shipping].to_f * 100)
     p @amount
 
     customer = Stripe::Customer.create(

@@ -17,7 +17,7 @@
 
   <div class="container">
     <img src="http://i66.tinypic.com/2rr53t4.png" alt="Air Mail" style="width:825px;height:628px;">
-  </div> 
+  </div>
 
     <html style="text-align: center;">
 
@@ -29,7 +29,7 @@
           </div>
         <% end %>
         <label class="amount">
-          <span><h2>Your total amount is : $<%= @package.shipping %></h2></span>
+          <span><h2>Your total amount is : $<%= '%.02f' % @package.shipping %></h2></span>
         </label>
       </article>
       <br>
