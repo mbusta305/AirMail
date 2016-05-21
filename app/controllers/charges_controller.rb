@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
   require "stripe"
-  Stripe.api_key = ENV['stripe_key']
+  Stripe.setPublishableKey = ENV['stripe_key']
 
   def new
     @package = Package.find(params[:package])
