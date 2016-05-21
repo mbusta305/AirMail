@@ -36,7 +36,12 @@
   <div class="container">
     <div class="jumbotron">
 
-      <center><img src="http://i65.tinypic.com/2cg0fx3.png" alt="Air Mail" height="35%" width="35%"></center>
+      <center>
+        <%= link_to root_path do %>
+          <%= image_tag "http://i65.tinypic.com/2cg0fx3.png", :style => "height: 35%; width: 35%" %>
+        <% end %>
+        <!-- <img src="http://i65.tinypic.com/2cg0fx3.png" alt="Air Mail" height="35%" width="35%"> -->
+      </center>
 
       <div class="progress progress-striped active">
         <div class="progress-bar progress-bar-primary" style="width: 100%"></div>
