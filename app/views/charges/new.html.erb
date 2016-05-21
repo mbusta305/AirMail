@@ -29,7 +29,7 @@
           </div>
         <% end %>
         <label class="amount">
-          <span><h2>Your total amount is : $<%= '%.02f' % @package.shipping %></h2></span>
+          <span><h2>Your total amount is : $<%= '%.02f' % (@package.shipping + 5) %></h2></span>
         </label>
       </article>
       <br>
